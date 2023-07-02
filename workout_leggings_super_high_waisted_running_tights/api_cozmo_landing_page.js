@@ -14,7 +14,7 @@ $("#formInfo").submit(function (event) {
   // Send an AJAX request to insert the order record
 
   $.ajax({
-    url: "https://cozmo.ma/api/ordervisite",
+    url: "https://noxeva.com/api/ordervisite",
     type: "POST",
     headers: {
       "Access-Control-Allow-Origin": "*",
