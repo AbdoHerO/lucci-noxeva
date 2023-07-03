@@ -42,6 +42,44 @@
         fbq('track', 'PageView');
     </script>
 
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable cut, copy, and paste
+        document.addEventListener('cut', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('copy', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('paste', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('drop', function (e) {
+            e.preventDefault();
+        });
+
+    </script>
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!--<link rel="stylesheet" href="css/fontawesome/all.css">-->
     <link rel="stylesheet" href="css/fontawesome/V4-shims.css">
@@ -225,7 +263,7 @@
                                                     العافيه 😍</p>
                                                 <h5
                                                     class="u-align-right u-custom-font u-heading-font u-text u-text-black u-text-3">
-                                                    ـ أحمد كمال                                                </h5>
+                                                    ـ أحمد كمال </h5>
                                             </div>
                                         </div>
                                         <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt=""
@@ -238,9 +276,11 @@
                                         <div
                                             class="u-container-style u-group u-radius-20 u-shape-round u-similar-fill u-white u-group-2">
                                             <div class="u-container-layout u-valign-middle u-container-layout-4">
-                                                <p class="u-align-left u-text u-text-black u-text-font u-text-4">مظلة السيارة القابلة للطي رائعة! جودة عالية وتحمي السيارة من الشمس والتلاشي.
-                                                     الحجم مناسب لمعظم السيارات وسهلة التخزين. خدمة العملاء
-                                                     ممتازة أيضًا.
+                                                <p class="u-align-left u-text u-text-black u-text-font u-text-4">مظلة
+                                                    السيارة القابلة للطي رائعة! جودة عالية وتحمي السيارة من الشمس
+                                                    والتلاشي.
+                                                    الحجم مناسب لمعظم السيارات وسهلة التخزين. خدمة العملاء
+                                                    ممتازة أيضًا.
                                                 </p>
                                                 <h5
                                                     class="u-align-right u-custom-font u-heading-font u-text u-text-black u-text-5">
@@ -260,7 +300,9 @@
                                         <div
                                             class="u-container-style u-group u-radius-20 u-shape-round u-similar-fill u-white u-group-2">
                                             <div class="u-container-layout u-valign-middle u-container-layout-4">
-                                                <p class="u-align-left u-text u-text-black u-text-font u-text-4">مظلة الزجاج الأمامي مفيدة جدًا. تحمي السيارة وتأتي مع غطاء مظلة مجاني. يمكن تحسين الجودة قليلاً، ولكن بشكل عام، أوصي بها.
+                                                <p class="u-align-left u-text u-text-black u-text-font u-text-4">مظلة
+                                                    الزجاج الأمامي مفيدة جدًا. تحمي السيارة وتأتي مع غطاء مظلة مجاني.
+                                                    يمكن تحسين الجودة قليلاً، ولكن بشكل عام، أوصي بها.
                                                 </p>
                                                 <h5
                                                     class="u-align-right u-custom-font u-heading-font u-text u-text-black u-text-5">
@@ -501,6 +543,7 @@
         <!-- App footer -->
         <!-- Hookables -->
     </div>
+
 
 
 
