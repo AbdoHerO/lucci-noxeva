@@ -43,8 +43,7 @@ $("#formInfo").submit(function (event) {
         product_id: "1125",
       });
 
-      document.location.href =
-        "/inflatable_sofa_air_cushion/order_success.html";
+      document.location.href = "/axi_inflatable_sofa/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
