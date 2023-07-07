@@ -47,7 +47,7 @@ $("#formInfo").submit(function (event) {
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
-      console.log("response", response);
+      // console.log("response", response);
 
       // swal({
       //   title: "تمت الطلبية بنجاح!",
