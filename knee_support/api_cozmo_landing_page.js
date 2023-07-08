@@ -11,7 +11,8 @@ $("#formInfo").submit(function (event) {
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
   var variant = $('#formInfo select[name="quantity_variante"]').val();
-  var quantity = $('#formInfo input[name="quantity"]').val();
+  var quantity = $('#formInfo input[name="quantity_pieces"]').val();
+
 
   // Send an AJAX request to insert the order record
   $.ajax({
