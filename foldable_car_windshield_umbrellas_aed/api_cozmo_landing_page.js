@@ -44,6 +44,7 @@ $("#formInfo").submit(function (event) {
       });
 
       document.location.href = "/foldable_car_windshield_umbrellas_aed/order_success.html";
+      
       // hide loading icon and enable the button
       // $("#save_guest_order").prop("disabled", false);
       // $("#span_loading").hide();
