@@ -13,7 +13,6 @@ $("#formInfo").submit(function (event) {
   var variant = $('#formInfo select[name="quantity_variante"]').val();
   var quantity = $('#formInfo input[name="quantity_pieces"]').val();
 
-
   // Send an AJAX request to insert the order record
   $.ajax({
     url: "https://noxeva.com/api/ordervisite",
@@ -29,8 +28,9 @@ $("#formInfo").submit(function (event) {
       city: "",
       adresse: adresse,
       id_product: "1126",
-      name_product: "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
-      unit_price: "124.5",
+      name_product:
+        "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
+      unit_price: "125",
       quantite: quantity,
       variant: variant,
       from_landing_page: true,
@@ -40,7 +40,8 @@ $("#formInfo").submit(function (event) {
       fbq("track", "Purchase", {
         value: 15,
         currency: "USD",
-        content_name: "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
+        content_name:
+          "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
         content_type: "Sports & outdoors",
         product_id: "1126",
       });
