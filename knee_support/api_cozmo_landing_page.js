@@ -31,7 +31,7 @@ $("#formInfo").submit(function (event) {
       id_product: "1126",
       name_product:
         "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
-      unit_price: "125",
+      unit_price: price,
       quantite: quantity,
       variant: variant,
       from_landing_page: true,
