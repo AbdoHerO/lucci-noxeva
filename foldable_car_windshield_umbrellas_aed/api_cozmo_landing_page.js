@@ -43,20 +43,21 @@ $("#formInfo").submit(function (event) {
         product_id: "1121",
       });
 
+      document.location.href = "/foldable_car_windshield_umbrellas_aed/order_success.html";
       // hide loading icon and enable the button
-      $("#save_guest_order").prop("disabled", false);
-      $("#span_loading").hide();
+      // $("#save_guest_order").prop("disabled", false);
+      // $("#span_loading").hide();
       console.log("response", response);
-      swal({
-        title: "تمت الطلبية بنجاح!",
-        text: "سيتصل بك قريقنا لتأكيد الطلبية",
-        icon: "success",
-        buttons: {
-          confirm: {
-            className: "btn btn-success",
-          },
-        },
-      });
+      // swal({
+      //   title: "تمت الطلبية بنجاح!",
+      //   text: "سيتصل بك قريقنا لتأكيد الطلبية",
+      //   icon: "success",
+      //   buttons: {
+      //     confirm: {
+      //       className: "btn btn-success",
+      //     },
+      //   },
+      // });
     },
     error: function (xhr, status, error) {
       // hide loading icon and enable the button
