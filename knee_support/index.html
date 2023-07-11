@@ -469,14 +469,15 @@
                             <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
                                 data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
                                 <p><span style="font-size: 24px; color: #2692c0"><strong>
-                                    <span class="offre_sale">عرض خاص !</span>
-                                    <br>
-                                    <span>
-                                        قطعة واحدة بسعر <span class="price_hot_sale">149 درهم</span> وقطعتان بسعر <span class="price_hot_sale">249 درهم</span> فقط !  
+                                            <span class="offre_sale">عرض خاص !</span>
+                                            <br>
+                                            <span>
+                                                قطعة واحدة بسعر <span class="price_hot_sale">149 درهم</span> وقطعتان
+                                                بسعر <span class="price_hot_sale">249 درهم</span> فقط !
 
-                                    </span>
+                                            </span>
 
-                                </strong></span></p>
+                                        </strong></span></p>
                             </div>
                             <div class="product-price-container"><span class="product-price"><span class="value"
                                         id="price_displayed">149</span><span class="currency">&nbsp;د.م</span></span>
@@ -488,9 +489,8 @@
                                     <div class="main">
                                         <form method="post" enctype="multipart/form-data" id="formInfo">
                                             <input type="hidden" name="id" value="cc83bb80-0d63-40cc-81f5-ba7093419793">
-                                            <input type="hidden" name="quantity" value="1"> 
-                                            <input type="text"
-                                                name="extra_payload" style="display: none;">
+                                            <input type="hidden" name="quantity" value="1">
+                                            <input type="text" name="extra_payload" style="display: none;">
                                             <div class="checkout-form">
                                                 <div class="checkout-groups">
                                                     <h2 class="checkout-heading"></h2>
@@ -508,6 +508,7 @@
                                                         </Select>
                                                     </div>
                                                     <input type="hidden" name="quantity_pieces" id="quantity" value="1">
+                                                    <input type="hidden" name="price_pieces" id="price_pieces" value="">
                                                     <div class="form-group is-required"><label class="form-label">الأسم
                                                             الكامل</label> <input required
                                                             oninvalid="this.setCustomValidity('المرجو إدخال إسمك');"
@@ -587,6 +588,7 @@
 
     <script>
 
+        var price_pieces = document.getElementById("price_pieces");
         var selectElement = document.getElementById("quantity_variante");
         var hiddenInput = document.getElementById("quantity");
         var currencyElement = document.getElementById("price_displayed");
@@ -597,12 +599,15 @@
             var selectedValue = selectElement.value;
 
             if (selectedValue === "1piece") {
+                price_pieces.value = "149";
                 hiddenInput.value = "1";
                 currencyElement.innerText = "149";
             } else if (selectedValue === "2piece") {
+                price_pieces.value = "249";
                 hiddenInput.value = "2";
                 currencyElement.innerText = "249";
             } else {
+                price_pieces.value = "149";
                 hiddenInput.value = "1";
                 currencyElement.innerText = "149";
             }
