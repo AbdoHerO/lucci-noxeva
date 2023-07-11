@@ -44,7 +44,7 @@ $("#formInfo").submit(function (event) {
       });
 
       document.location.href =
-        "/inflatable_sofa_air_cushion/order_success.html";
+        "/inflatable_sofa_air_cushion_2/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
