@@ -28,7 +28,7 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1046",
       name_product: "inflatable_swimming_pool",
-      unit_price: "1325",
+      unit_price: "1598",
       quantite: "1",
       variant: variant,
       from_landing_page: true,
