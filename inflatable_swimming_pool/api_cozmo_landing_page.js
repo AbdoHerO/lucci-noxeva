@@ -44,7 +44,7 @@ $("#formInfo").submit(function (event) {
       });
 
       // To track the purchase event using TikTok Pixel
-      ttq.track("CompletePayment");
+      // ttq.track("CompletePayment");
 
       document.location.href = "/inflatable_swimming_pool/order_success.html";
       // hide loading icon and enable the button
