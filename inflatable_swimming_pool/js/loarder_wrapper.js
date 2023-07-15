@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   $("body").removeClass("body_fixed");
 
   // To track the ViewContent event using TikTok Pixel
-  // ttq.track("ViewContent");
+  ttq.track("ViewContent");
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
