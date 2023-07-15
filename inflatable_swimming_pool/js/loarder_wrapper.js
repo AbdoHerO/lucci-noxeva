@@ -3,19 +3,7 @@ window.addEventListener("load", function () {
   $("body").removeClass("body_fixed");
 
   // To track the ViewContent event using TikTok Pixel
-  ttq.track("ViewContent", {
-    contents: [
-      {
-        content_id: "1046",
-        content_name: "inflatable_swimming_pool",
-        quantity: 1,
-        price: 159.9,
-      },
-    ],
-    content_type: "inflatable_swimming_pool",
-    value: 159.9,
-    currency: "USD",
-  });
+  ttq.track("ViewContent");
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
