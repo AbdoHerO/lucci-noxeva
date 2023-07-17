@@ -81,13 +81,16 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1046",
       name_product: "inflatable_swimming_pool",
-      unit_price: "1325",
+      unit_price: "1598",
       quantite: "1",
       variant: variant,
       from_landing_page: true,
     },
     success: function (response) {
 
+
+      // To track the purchase event using TikTok Pixel
+      // ttq.track("CompletePayment");
 
       document.location.href = "/inflatable_swimming_pool/order_success.html";
       // hide loading icon and enable the button
