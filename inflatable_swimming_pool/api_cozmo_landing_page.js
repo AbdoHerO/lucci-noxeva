@@ -15,7 +15,7 @@ $("#formInfo").submit(function (event) {
   // Create the data object for SheetDB
   var sheetDBData = {
     name: "inflatable_swimming_pool",
-    date: "new Date()",
+    date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
     city: adresse,
