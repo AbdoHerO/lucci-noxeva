@@ -28,7 +28,7 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1063",
       name_product: "inflatable_sofa_air_cushion",
-      unit_price: "999",
+      unit_price: "899",
       quantite: "1",
       variant: "",
       from_landing_page: true,
