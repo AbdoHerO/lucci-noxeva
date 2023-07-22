@@ -31,7 +31,7 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1035",
       name_product: "4-IN-1 MAKEUP PEN",
-      unit_price: "99",
+      unit_price: "139",
       quantite: "1",
       variant: "",
       from_landing_page: true,
