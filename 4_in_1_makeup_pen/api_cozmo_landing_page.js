@@ -37,13 +37,28 @@ $("#formInfo").submit(function (event) {
       from_landing_page: true,
     },
     success: function (response) {
+      // To track the purchase event using TikTok Pixel
+      ttq.track("CompletePayment", {
+        contents: [
+          {
+            content_id: "1035",
+            content_name: "4_in_1_makeup_pen",
+            quantity: 1,
+            price: 10,
+          },
+        ],
+        content_type: "product",
+        value: 10,
+        currency: "USD",
+      });
+
       // To track the purchase event using Facebook Pixel
       fbq("track", "Purchase", {
         value: 10,
         currency: "USD",
         content_name: "4_in_1_makeup_pen",
         content_type: "makeup",
-        product_id: "1063",
+        product_id: "1035",
       });
 
       // hide loading icon and enable the button
