@@ -29,7 +29,7 @@ $("#formInfo").submit(function (event) {
       id_product: "1121",
       name_product:
         "Foldable Car Windshield Umbrellas, Large Size Car Windshield Sun Shade Umbrella for Front Windows, Suitable for Windshields of Various Car Models",
-      unit_price: "263.86",
+      unit_price: "396.48",
       quantite: "1",
       variant: "",
       from_landing_page: true,
@@ -37,7 +37,7 @@ $("#formInfo").submit(function (event) {
     success: function (response) {
       // To track the purchase event using Facebook Pixel
       fbq("track", "Purchase", {
-        value: 27,
+        value: 39,
         currency: "USD",
         content_name:
           "Foldable Car Windshield Umbrellas, Large Size Car Windshield Sun Shade Umbrella for Front Windows, Suitable for Windshields of Various Car Models",
