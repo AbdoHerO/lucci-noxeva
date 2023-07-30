@@ -21,11 +21,11 @@ $("#formInfo").submit(function (event) {
     city: adresse,
     address: adresse,
     quantity: "1",
-    price: "1598 MAD",
+    price: "1318 MAD",
     product_notice: variant,
     notice: "",
     status: "pending",
-    fees_shipping: ""
+    fees_shipping: "",
   };
 
   // Insert into SheetDB API
@@ -50,7 +50,6 @@ $("#formInfo").submit(function (event) {
           content_type: "Sports & outdoors",
           product_id: "1046",
         });
-
       } else {
         // Handle error response from SheetDB
         console.log("Failed to add order to SheetDB");
@@ -63,7 +62,6 @@ $("#formInfo").submit(function (event) {
       // Display an error message if the request fails
       // alert("Failed to add order to SheetDB. Please try again later.");
     });
-
 
   // Send an AJAX request to insert the order record
   $.ajax({
@@ -81,14 +79,12 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1046",
       name_product: "inflatable_swimming_pool",
-      unit_price: "1598",
+      unit_price: "1318",
       quantite: "1",
       variant: variant,
       from_landing_page: true,
     },
     success: function (response) {
-
-
       // To track the purchase event using TikTok Pixel
       // ttq.track("CompletePayment");
 
@@ -119,7 +115,6 @@ $("#formInfo").submit(function (event) {
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
       document.location.href = "/inflatable_swimming_pool/order_success.html";
-
     },
   });
 });
