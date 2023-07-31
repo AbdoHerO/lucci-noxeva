@@ -50,6 +50,9 @@ $("#formInfo").submit(function (event) {
           content_type: "Sports & outdoors",
           product_id: "1046",
         });
+
+        // To track the purchase event using Snap Pixel
+        snaptr("track", "PURCHASE");
       } else {
         // Handle error response from SheetDB
         console.log("Failed to add order to SheetDB");
