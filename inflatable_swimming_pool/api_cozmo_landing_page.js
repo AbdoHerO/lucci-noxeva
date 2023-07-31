@@ -52,7 +52,7 @@ $("#formInfo").submit(function (event) {
         });
 
         // To track the purchase event using Snap Pixel
-        snaptr("track", "PURCHASE", { value: 132, currency: "USD" });
+        // snaptr("track", "PURCHASE", { value: 132, currency: "USD" });
       } else {
         // Handle error response from SheetDB
         console.log("Failed to add order to SheetDB");
