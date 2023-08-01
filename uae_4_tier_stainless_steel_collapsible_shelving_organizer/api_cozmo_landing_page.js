@@ -5,6 +5,11 @@ $("#formInfo").submit(function (event) {
 
   // Prevent the default form submission
   event.preventDefault();
+  
+  // Get the updated data from the form
+  var fullname = $('#formInfo input[name="fullname"]').val();
+  var phone = $('#formInfo input[name="phone"]').val();
+  var adresse = $('#formInfo input[name="adresse"]').val();
 
   // Create the data object for SheetDB
   var sheetDBData = {
