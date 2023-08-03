@@ -39,7 +39,7 @@ $("#formInfo").submit(function (event) {
     success: function (response) {
       // To track the purchase event using Facebook Pixel
       fbq("track", "Purchase", {
-        value: 15,
+        value: 11,
         currency: "USD",
         content_name:
           "Knee Pads Sport Kneepad Gym Sports Leg Protector Sport Adhesive Strapping Long Knee Support Self-Adhesive",
