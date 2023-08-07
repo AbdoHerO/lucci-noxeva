@@ -10,7 +10,7 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
-
+  var variant = $('#formInfo select[name="color"]').val();
   // Send an AJAX request to insert the order record
 
   $.ajax({
@@ -30,7 +30,7 @@ $("#formInfo").submit(function (event) {
       name_product: "Portable Washing Machine with Dryer Bucket Socks Underwear Washer Folding Campin",
       unit_price: "399",
       quantite: "1",
-      variant: "",
+      variant: variant,
       from_landing_page: true,
     },
     success: function (response) {

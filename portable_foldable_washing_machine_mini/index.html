@@ -218,14 +218,14 @@
 
 
                 <div class="container">
-                    <img src="images/bg2.jpg" alt="Image description">
+                    <img src="images/bg.jpg" alt="Image description">
                     <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 13.85%;">إشتري الآن ب 399
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 14.85%;">إشتري الآن ب 399
                             درهم
                             فقط</button>
                     </a>
                     <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 49%;">إشتري الآن ب 399
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 53.6%;">إشتري الآن ب 399
                             درهم
                             فقط</button>
                     </a>
@@ -477,6 +477,22 @@
                                             <div class="checkout-form">
                                                 <div class="checkout-groups">
                                                     <h2 class="checkout-heading"></h2>
+                                                    
+                                                    <div class="form-group is-required"><label
+                                                            class="form-label">اللون</label>
+                                                        <Select required
+                                                            oninvalid="this.setCustomValidity('المرجو اختيار اللون');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو اختيار اللون" type="text"
+                                                            name="color" placeholder="اللون">
+                                                            <option value="">اختر اللون</option>
+                                                            <option value="Orange">برتقالي</option>
+                                                            <option value="SeaGreen">اخضر</option>
+                                                            <option value="SkyBlue">أزرق</option>
+                                                            <option value="Pink">وردي</option>
+                                                        </Select>
+                                                    </div>
+
                                                     <div class="form-group is-required"><label class="form-label">الأسم
                                                             الكامل</label> <input required
                                                             oninvalid="this.setCustomValidity('المرجو إدخال إسمك');"
