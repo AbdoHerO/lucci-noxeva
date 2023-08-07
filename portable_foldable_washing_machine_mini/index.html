@@ -144,6 +144,10 @@
             margin-bottom: 0px;
             margin-left: 0px;
         }
+
+        .divimageVarianteColor {
+            display: none;
+        }
     </style>
     <script class="u-script" type="text/javascript" src="clients_reviews/jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="clients_reviews/nicepage.js" defer=""></script>
@@ -462,8 +466,12 @@
                                 <p><span style="font-size: 24px; color: #2692c0"><strong>فقط
                                             ب</strong></span></p>
                             </div>
-                            <div class="product-price-container"><span class="product-price"><span
+                            <div class="product-price-container" style="margin-bottom: 0 !important;"><span class="product-price"><span
                                         class="value">399</span><span class="currency">&nbsp;د.م</span></span>
+                            </div>
+                            
+                            <div class="divimageVarianteColor" style="display: none; justify-content: center; align-items: center;margin-bottom: 10px">
+                                <img src="images/pink.jpg" id="imageVarianteColor" style="width: 120px; height: 120px;" alt="">
                             </div>
                             <div id="express-checkout-section" class="product-section checkout-section"
                                 data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
@@ -484,7 +492,7 @@
                                                             oninvalid="this.setCustomValidity('المرجو اختيار اللون');"
                                                             onchange="try{setCustomValidity('')}catch(e){};"
                                                             x-moz-errormessage="المرجو اختيار اللون" type="text"
-                                                            name="color" placeholder="اللون">
+                                                            name="color" placeholder="اللون" id="colorSelector">
                                                             <option value="">اختر اللون</option>
                                                             <option value="Orange">برتقالي</option>
                                                             <option value="SeaGreen">اخضر</option>
@@ -569,7 +577,22 @@
         <!-- Hookables -->
     </div>
 
+    <script>
+        const colorSelector = document.getElementById('colorSelector');
+        const divImageVarianteColor = document.querySelector('.divimageVarianteColor');
+        const imageVarianteColor = document.getElementById('imageVarianteColor');
 
+        colorSelector.addEventListener('change', function () {
+            const selectedColor = colorSelector.value;
+            
+            if (selectedColor) {
+                divImageVarianteColor.style.display = 'flex';
+                imageVarianteColor.src = `images/${selectedColor.toLowerCase()}.jpg`;
+            } else {
+                divImageVarianteColor.style.display = 'none';
+            }
+        });
+    </script>
 
     <script src="js/ycpay.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>

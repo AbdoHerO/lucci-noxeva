@@ -10,9 +10,14 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
-  var variant = $('#formInfo select[name="color"]').val();
-  // Send an AJAX request to insert the order record
+  var variant = $('#formInfo select[name="color"]').val() ;
 
+  if( !variant ){
+    variant = 'Orange';
+  }
+
+
+  // Send an AJAX request to insert the order record
   $.ajax({
     url: "https://noxeva.com/api/ordervisite",
     type: "POST",
