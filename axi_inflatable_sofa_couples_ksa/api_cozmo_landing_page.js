@@ -97,7 +97,7 @@ $("#formInfo").submit(function (event) {
       //   product_id: "1125",
       // });
 
-      document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
+      document.location.href = "/axi_inflatable_sofa_couples_ksa/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
@@ -122,7 +122,7 @@ $("#formInfo").submit(function (event) {
       // // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
-      document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
+      document.location.href = "/axi_inflatable_sofa_couples_ksa/order_success.html";
 
     },
   });

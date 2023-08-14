@@ -97,7 +97,7 @@ $("#formInfo").submit(function (event) {
       // });
 
       document.location.href =
-        "/foldable_car_windshield_umbrellas_aed/order_success.html";
+        "/foldable_car_windshield_umbrellas_ksa/order_success.html";
 
       // hide loading icon and enable the button
       // $("#save_guest_order").prop("disabled", false);
@@ -111,7 +111,7 @@ $("#formInfo").submit(function (event) {
       // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
       document.location.href =
-        "/foldable_car_windshield_umbrellas_aed/order_success.html";
+        "/foldable_car_windshield_umbrellas_ksa/order_success.html";
     },
   });
 });
