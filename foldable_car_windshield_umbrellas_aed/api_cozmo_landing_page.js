@@ -17,7 +17,7 @@ $("#formInfo").submit(function (event) {
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
-    city: "UAE",
+    city: adresse,
     address: adresse,
     quantity: "1",
     price: "396.48 MAD",
@@ -75,7 +75,7 @@ $("#formInfo").submit(function (event) {
       first_name: fullname,
       last_name: "",
       phone: phone,
-      city: "UAE",
+      city: "",
       adresse: adresse,
       id_product: "1121",
       name_product:
