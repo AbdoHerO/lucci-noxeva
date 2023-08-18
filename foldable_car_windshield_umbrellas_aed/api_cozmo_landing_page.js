@@ -10,6 +10,10 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
+  
+  var variant = $('#formInfo select[name="quantity_variante"]').val();
+  var quantity = $('#formInfo input[name="quantity_pieces"]').val();
+  var price = $('#formInfo input[name="price_pieces"]').val();
 
   // Create the data object for SheetDB
   var sheetDBData = {
@@ -19,9 +23,9 @@ $("#formInfo").submit(function (event) {
     phone: phone,
     city: adresse,
     address: adresse,
-    quantity: "1",
-    price: "396.48 MAD",
-    product_notice: "",
+    quantity: quantity,
+    price: price + "AED",
+    product_notice: variant,
     notice: "",
     status: "pending",
     fees_shipping: "",
@@ -80,9 +84,9 @@ $("#formInfo").submit(function (event) {
       id_product: "1121",
       name_product:
         "Foldable Car Windshield Umbrellas, Large Size Car Windshield Sun Shade Umbrella for Front Windows, Suitable for Windshields of Various Car Models",
-      unit_price: "396.48",
-      quantite: "1",
-      variant: "",
+      unit_price: price,
+      quantite: quantity,
+      variant: variant,
       from_landing_page: true,
     },
     success: function (response) {

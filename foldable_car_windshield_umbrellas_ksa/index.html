@@ -234,7 +234,8 @@
                     <img src="images/bg2.jpg" alt="Image description">
                     <img src="images/imggif01.gif" class="overlay-img-gif" alt="Image description">
                     <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button">احصل عليها اليوم ب 99 ريال
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن ب 99
+                            ريال
                             فقط</button>
                     </a>
                 </div>
@@ -466,14 +467,25 @@
                     class="section page-section express-checkout-form-section PBS-qnim9k1632909988068">
                     <div data-pb-debug="margin" class="inner-express-checkout-form">
                         <div data-pb-debug="padding" class="page-builder-express-checkout-wrapper">
-                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
-                                data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
-                                <p><span style="font-size: 24px; color: #2692c0"><strong>فقط
-                                            ب</strong></span></p>
-                            </div>
-                            <div class="product-price-container"><span class="product-price"><span
-                                        class="value">99</span><span class="currency">&nbsp;ر.س</span></span>
-                            </div>
+                            <div data-pb-section="PBS-qnim9k1632909988068"
+                                    data-pb-field="express-checkout-form-header" data-pb-type="html-editor"
+                                    data-pb-value="فقط ب" class="fr-view">
+                                    <p><span style="font-size: 24px; color: #2692c0"><strong>
+                                                <span class="offre_sale">عرض خاص !</span>
+                                                <br>
+                                                <span>
+                                                    قطعة واحدة بسعر <span class="price_hot_sale_1">99 ريال</span>
+                                                    وقطعتان
+                                                    بسعر <span class="price_hot_sale_2">149 ريال</span> فقط !
+
+                                                </span>
+
+                                            </strong></span></p>
+                                </div>
+                                <div class="product-price-container"><span class="product-price"><span
+                                            id="price_displayed" class="value">99</span><span
+                                            class="currency">&nbsp;ر.س</span></span>
+                                </div>
                             <div id="express-checkout-section" class="product-section checkout-section"
                                 data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
                                 data-pb-type="single-product" data-pb-value="[object Object]">
@@ -486,6 +498,21 @@
                                             <div class="checkout-form">
                                                 <div class="checkout-groups">
                                                     <h2 class="checkout-heading"></h2>
+                                                    <div class="form-group is-required"><label
+                                                            class="form-label">الكمــية</label>
+                                                        <Select required
+                                                            oninvalid="this.setCustomValidity('المرجو اختيار الكمــية');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو اختيار الكمــية" type="text"
+                                                            name="quantity_variante" id="quantity_variante"
+                                                            placeholder="الكمــية">
+                                                            <option value="">اختر الكمــية</option>
+                                                            <option value="1piece">قطعــة واحـدة</option>
+                                                            <option value="2piece">قطعتــان</option>
+                                                        </Select>
+                                                    </div>
+                                                    <input type="hidden" name="quantity_pieces" id="quantity" value="1">
+                                                    <input type="hidden" name="price_pieces" id="price_pieces" value="">
                                                     <div class="form-group is-required"><label class="form-label">الأسم
                                                             الكامل</label> <input required
                                                             oninvalid="this.setCustomValidity('المرجو إدخال إسمك');"
@@ -564,6 +591,35 @@
 
 
 
+    <script>
+
+        var price_pieces = document.getElementById("price_pieces");
+        var selectElement = document.getElementById("quantity_variante");
+        var hiddenInput = document.getElementById("quantity");
+        var currencyElement = document.getElementById("price_displayed");
+
+
+        selectElement.addEventListener("change", function () {
+
+            var selectedValue = selectElement.value;
+
+            if (selectedValue === "1piece") {
+                price_pieces.value = "99";
+                hiddenInput.value = "1";
+                currencyElement.innerText = "99";
+            } else if (selectedValue === "2piece") {
+                price_pieces.value = "75";
+                hiddenInput.value = "2";
+                currencyElement.innerText = "149";
+            } else {
+                price_pieces.value = "99";
+                hiddenInput.value = "1";
+                currencyElement.innerText = "99";
+            }
+        });
+
+
+    </script>
 
     <script src="js/ycpay.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
