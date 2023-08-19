@@ -17,7 +17,7 @@ $("#formInfo").submit(function (event) {
 
   // Create the data object for SheetDB
   var sheetDBData = {
-    name: "uae_5_tier_stainless _steel_collapsible_shelving_organizer",
+    name: "uae_4_5_tier_stainless _steel_collapsible_shelving_organizer",
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
