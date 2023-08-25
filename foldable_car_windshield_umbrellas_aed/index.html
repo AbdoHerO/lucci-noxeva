@@ -234,7 +234,7 @@
                     <img src="images/bg2.jpg" alt="Image description">
                     <img src="images/imggif01.gif" class="overlay-img-gif" alt="Image description">
                     <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن ب 99
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن ب 69
                             درهم
                             فقط</button>
                     </a>
@@ -363,7 +363,7 @@
                             </div>
                         </div>
                         <a href="#PBS-qnim9k1632909988068">
-                            <button id="fade_buy_btn_lead_2" class="overlay-button-2">احصل عليها اليوم ب 149 درهم
+                            <button id="fade_buy_btn_lead_2" class="overlay-button-2">احصل عليها اليوم ب 69 درهم
                                 فقط</button>
                         </a>
                     </div>
@@ -475,17 +475,17 @@
                                                 <span class="offre_sale">عرض خاص !</span>
                                                 <br>
                                                 <span>
-                                                    قطعة واحدة بسعر <span class="price_hot_sale_1">99 درهم</span>
+                                                    قطعة واحدة بسعر <span class="price_hot_sale_1">69 درهم</span>
                                                     وقطعتان
-                                                    بسعر <span class="price_hot_sale_2">149 درهم</span> فقط !
+                                                    بسعر <span class="price_hot_sale_2">99 درهم</span> فقط !
 
                                                 </span>
 
                                             </strong></span></p>
                                 </div>
                                 <div class="product-price-container"><span class="product-price"><span
-                                            id="price_displayed" class="value">99</span><span
-                                            class="currency">&nbsp;د.إ</span></span>
+                                            id="price_displayed" class="value">69</span><span
+                                            class="currency">&nbsp;د.إ <span id="quantity_displayed">(قطعة واحدة) </span></span></span>
                                 </div>
                                 <div id="express-checkout-section" class="product-section checkout-section"
                                     data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
@@ -509,8 +509,9 @@
                                                                 name="quantity_variante" id="quantity_variante"
                                                                 placeholder="الكمــية">
                                                                 <option value="">اختر الكمــية</option>
-                                                                <option value="1piece">قطعــة واحـدة</option>
-                                                                <option value="2piece">قطعتــان</option>
+                                                                <option value="1piece">قطعــة واحـدة (69 AED) </option>
+                                                                <option value="2piece">قطعتــان (99 AED) </option>
+                                                                <option value="3piece">3 قطع (149 AED) </option>
                                                             </Select>
                                                         </div>
                                                         <input type="hidden" name="quantity_pieces" id="quantity"
@@ -605,6 +606,7 @@
         var selectElement = document.getElementById("quantity_variante");
         var hiddenInput = document.getElementById("quantity");
         var currencyElement = document.getElementById("price_displayed");
+        var quantity_displayed = document.getElementById("quantity_displayed");
 
 
         selectElement.addEventListener("change", function () {
@@ -612,17 +614,25 @@
             var selectedValue = selectElement.value;
 
             if (selectedValue === "1piece") {
-                price_pieces.value = "99";
+                price_pieces.value = "69";
                 hiddenInput.value = "1";
-                currencyElement.innerText = "99";
+                currencyElement.innerText = "69";
+                quantity_displayed.innerText = "(قطعة واحدة)";
             } else if (selectedValue === "2piece") {
-                price_pieces.value = "75";
+                price_pieces.value = "50";
                 hiddenInput.value = "2";
-                currencyElement.innerText = "149";
-            } else {
-                price_pieces.value = "99";
-                hiddenInput.value = "1";
                 currencyElement.innerText = "99";
+                quantity_displayed.innerText = "(قطعتان)";
+            } else if (selectedValue === "3piece") {
+                price_pieces.value = "50";
+                hiddenInput.value = "3";
+                currencyElement.innerText = "149";
+                quantity_displayed.innerText = "(3 قطع)";
+            } else {
+                price_pieces.value = "69";
+                hiddenInput.value = "1";
+                currencyElement.innerText = "69";
+                quantity_displayed.innerText = "(قطعة واحدة)";
             }
         });
 
