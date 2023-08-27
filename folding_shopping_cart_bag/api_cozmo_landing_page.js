@@ -10,18 +10,21 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
-  var variant = $('#formInfo select[name="color"]').val();
+  var color_variant = $('#formInfo select[name="color"]').val();
+  var quantity_variant = $('#formInfo select[name="quantity_variant"]').val();
+  var variant = color_variant + "-" + quantity_variant;
+  var price = $("#price_displayed").text();
 
   // Create the data object for SheetDB
   var sheetDBData = {
-    name: "inflatable_swimming_pool",
+    name: "Folding Shopping Cart Bag",
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
-    city: adresse,
+    city: "Morocco",
     address: adresse,
-    quantity: "1",
-    price: "1598 MAD",
+    quantity: quantity_variant == "2pieces" ? "2" : "3",
+    price: price,
     product_notice: variant,
     notice: "",
     status: "pending",
@@ -46,9 +49,9 @@ $("#formInfo").submit(function (event) {
         fbq("track", "Purchase", {
           value: 10,
           currency: "USD",
-          content_name: "inflatable_swimming_pool",
-          content_type: "Sports & outdoors",
-          product_id: "1046",
+          content_name: "Folding Shopping Cart Bag",
+          content_type: "Bag",
+          product_id: "1131",
         });
 
         // To track the purchase event using Snap Pixel
@@ -80,10 +83,10 @@ $("#formInfo").submit(function (event) {
       phone: phone,
       city: "",
       adresse: adresse,
-      id_product: "1046",
-      name_product: "inflatable_swimming_pool",
-      unit_price: "1598",
-      quantite: "1",
+      id_product: "1131",
+      name_product: "Folding Shopping Cart Bag",
+      unit_price: price,
+      quantite: quantity_variant == "2pieces" ? "2" : "3",
       variant: variant,
       from_landing_page: true,
     },
@@ -91,7 +94,7 @@ $("#formInfo").submit(function (event) {
       // To track the purchase event using TikTok Pixel
       // ttq.track("CompletePayment");
 
-      document.location.href = "/inflatable_swimming_pool/order_success.html";
+      document.location.href = "/folding_shopping_cart_bag/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
@@ -117,7 +120,7 @@ $("#formInfo").submit(function (event) {
       // // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
-      document.location.href = "/inflatable_swimming_pool/order_success.html";
+      document.location.href = "/folding_shopping_cart_bag/order_success.html";
     },
   });
 });
