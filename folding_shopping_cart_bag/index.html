@@ -536,8 +536,8 @@
                                                             name="quantity_variant" id="quantity_variant"
                                                             placeholder="العرض">
                                                             <option value="">اختر العرض</option>
-                                                            <option value="2pieces">قطعتين ب 99 درهم</option>
-                                                            <option value="3pieces">ثلاث قطع ب 129 درهم</option>
+                                                            <option value="2piece">قطعتين ب 99 درهم</option>
+                                                            <option value="3piece">ثلاث قطع ب 129 درهم</option>
                                                         </Select>
                                                     </div>
                                                     <div class="form-group is-required"><label
@@ -641,9 +641,9 @@
 
             var selectedValue = quantity_variant.value;
 
-            if (selectedValue === "2pieces") {
+            if (selectedValue === "2piece") {
                 price.innerText = "99";
-            } else if (selectedValue === "3pieces") {
+            } else if (selectedValue === "3piece") {
                 price.innerText = "129";
             } else {
                 price.innerText = "0";
