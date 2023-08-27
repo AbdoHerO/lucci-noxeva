@@ -86,7 +86,7 @@ $("#formInfo").submit(function (event) {
       id_product: "1131",
       name_product: "Folding Shopping Cart Bag",
       unit_price: price,
-      quantite: quantity_variant == "2piece" ? "2" : "3",
+      quantite: "1",
       variant: variant,
       from_landing_page: true,
     },
