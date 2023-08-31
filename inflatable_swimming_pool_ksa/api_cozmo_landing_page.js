@@ -21,7 +21,7 @@ $("#formInfo").submit(function (event) {
     city: "KSA",
     address: adresse,
     quantity: "1",
-    price: "1348 MAD",
+    price: "1101 MAD",
     product_notice: variant,
     notice: "",
     status: "pending",
