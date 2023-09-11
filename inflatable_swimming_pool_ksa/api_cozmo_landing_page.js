@@ -21,7 +21,7 @@ $("#formInfo").submit(function (event) {
     city: "KSA",
     address: adresse,
     quantity: "1",
-    price: "1348 MAD",
+    price: "810 MAD",
     product_notice: variant,
     notice: "",
     status: "pending",
@@ -82,7 +82,7 @@ $("#formInfo").submit(function (event) {
       adresse: adresse,
       id_product: "1046",
       name_product: "inflatable_swimming_pool",
-      unit_price: "1348",
+      unit_price: "810",
       quantite: "1",
       variant: variant,
       from_landing_page: true,
@@ -91,7 +91,8 @@ $("#formInfo").submit(function (event) {
       // To track the purchase event using TikTok Pixel
       // ttq.track("CompletePayment");
 
-      document.location.href = "/inflatable_swimming_pool_ksa/order_success.html";
+      document.location.href =
+        "/inflatable_swimming_pool_ksa/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
@@ -117,7 +118,8 @@ $("#formInfo").submit(function (event) {
       // // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
-      document.location.href = "/inflatable_swimming_pool_ksa/order_success.html";
+      document.location.href =
+        "/inflatable_swimming_pool_ksa/order_success.html";
     },
   });
 });
