@@ -10,29 +10,26 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
-  var color_variant = $('#formInfo select[name="color"]').val();
-  var quantity_variant = $('#formInfo select[name="quantity_variant"]').val();
-  var variant = color_variant + "-" + quantity_variant;
-  var price = $("#price_displayed").text();
+  var variant = $('#formInfo select[name="color"]').val();
 
   // Create the data object for SheetDB
   var sheetDBData = {
-    name: "Folding Shopping Cart Bag",
+    name: "inflatable_swimming_pool",
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
-    city: "Morocco",
+    city: "KSA",
     address: adresse,
-    quantity: quantity_variant == "2piece" ? "2" : "3",
-    price: price,
-    product_notice: variant,
+    quantity: "1",
+    price: "810 MAD",
+    product_notice: Blue,
     notice: "",
     status: "pending",
     fees_shipping: "",
   };
 
   // Insert into SheetDB API
-  fetch("https://sheetdb.io/api/v1/g2ui577mzolwl", {
+  fetch("https://sheetdb.io/api/v1/szh8pfhm2hmh5", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -49,9 +46,9 @@ $("#formInfo").submit(function (event) {
         fbq("track", "Purchase", {
           value: 10,
           currency: "USD",
-          content_name: "Folding Shopping Cart Bag",
-          content_type: "Bag",
-          product_id: "1131",
+          content_name: "inflatable_swimming_pool",
+          content_type: "Sports & outdoors",
+          product_id: "1046",
         });
 
         // To track the purchase event using Snap Pixel
@@ -81,20 +78,21 @@ $("#formInfo").submit(function (event) {
       first_name: fullname,
       last_name: "",
       phone: phone,
-      city: "",
+      city: "KSA",
       adresse: adresse,
-      id_product: "1131",
-      name_product: "Folding Shopping Cart Bag",
-      unit_price: price,
+      id_product: "1046",
+      name_product: "inflatable_swimming_pool",
+      unit_price: "810",
       quantite: "1",
-      variant: variant,
+      variant: "Blue",
       from_landing_page: true,
     },
     success: function (response) {
       // To track the purchase event using TikTok Pixel
       // ttq.track("CompletePayment");
 
-      document.location.href = "/folding_shopping_cart_bag/order_success.html";
+      document.location.href =
+        "/inflatable_swimming_pool_ksa/order_success.html";
       // hide loading icon and enable the button
       //   $("#save_guest_order").prop("disabled", false);
       //   $("#span_loading").hide();
@@ -120,7 +118,8 @@ $("#formInfo").submit(function (event) {
       // // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
-      document.location.href = "/folding_shopping_cart_bag/order_success.html";
+      document.location.href =
+        "/inflatable_swimming_pool_ksa/order_success.html";
     },
   });
 });
