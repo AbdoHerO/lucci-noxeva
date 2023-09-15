@@ -24,7 +24,7 @@ $("#formInfo").submit(function (event) {
     city: "-",
     address: adresse,
     quantity: quantity_variant == "2piece" ? "2" : "3",
-    price: price,
+    price: price + "Dh",
     product_notice: variant,
     notice: "",
     status: "pending",
