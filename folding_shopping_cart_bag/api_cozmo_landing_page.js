@@ -21,7 +21,7 @@ $("#formInfo").submit(function (event) {
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
-    city: "Morocco",
+    city: "-",
     address: adresse,
     quantity: quantity_variant == "2piece" ? "2" : "3",
     price: price,
