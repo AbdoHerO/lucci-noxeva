@@ -24,7 +24,7 @@ $("#formInfo").submit(function (event) {
     city: "KSA",
     address: adresse,
     quantity: quantity,
-    price: price + "SAR",
+    price: quantity == 2 ? "99" : "139",
     product_notice: variant,
     notice: "",
     status: "pending",
@@ -47,7 +47,7 @@ $("#formInfo").submit(function (event) {
 
         // To track the purchase event using Facebook Pixel
         fbq("track", "Purchase", {
-          value: 39,
+          value: 26,
           currency: "USD",
           content_name:
             "Foldable Car Windshield Umbrellas, Large Size Car Windshield Sun Shade Umbrella for Front Windows, Suitable for Windshields of Various Car Models",
