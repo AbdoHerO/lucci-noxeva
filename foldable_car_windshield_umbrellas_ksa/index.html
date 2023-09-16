@@ -237,7 +237,8 @@
                         <!-- <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن ب 99
                             ريال
                             فقط</button> -->
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن قطعتين ب 149 ريال فقط</button>
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 12.3%;">إشتري الآن قطعتين ب 99
+                            ريال فقط</button>
                     </a>
                 </div>
 
@@ -366,7 +367,8 @@
                         <a href="#PBS-qnim9k1632909988068">
                             <!-- <button id="fade_buy_btn_lead_2" class="overlay-button-2">احصل عليها اليوم ب 99 ريال
                                 فقط</button> -->
-                            <button id="fade_buy_btn_lead_2" class="overlay-button-2">احصل عليها اليوم قطعتين ب 149 ريال فقط</button>
+                            <button id="fade_buy_btn_lead_2" class="overlay-button-2">احصل عليها اليوم قطعتين ب 99 ريال
+                                فقط</button>
                         </a>
                     </div>
                 </section>
@@ -469,25 +471,24 @@
                     class="section page-section express-checkout-form-section PBS-qnim9k1632909988068">
                     <div data-pb-debug="margin" class="inner-express-checkout-form">
                         <div data-pb-debug="padding" class="page-builder-express-checkout-wrapper">
-                            <div data-pb-section="PBS-qnim9k1632909988068"
-                                    data-pb-field="express-checkout-form-header" data-pb-type="html-editor"
-                                    data-pb-value="فقط ب" class="fr-view">
-                                    <p><span style="font-size: 24px; color: #2692c0"><strong>
-                                                <span class="offre_sale">عرض خاص !</span>
-                                                <br>
-                                                <span>
-                                                    قطعتان بسعر <span class="price_hot_sale_1">149 ريال</span>
-                                                    و 3 قطع
-                                                    بسعر <span class="price_hot_sale_2">199 ريال</span> فقط !
+                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
+                                data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
+                                <p><span style="font-size: 24px; color: #2692c0"><strong>
+                                            <span class="offre_sale">عرض خاص !</span>
+                                            <br>
+                                            <span>
+                                                قطعتان بسعر <span class="price_hot_sale_1">99 ريال</span>
+                                                و 3 قطع
+                                                بسعر <span class="price_hot_sale_2">149 ريال</span> فقط !
 
-                                                </span>
+                                            </span>
 
-                                            </strong></span></p>
-                                </div>
-                                <div class="product-price-container"><span class="product-price"><span
-                                            id="price_displayed" class="value">149</span><span
-                                            class="currency">&nbsp;ر.س <span id="quantity_displayed">(قطعتان) </span></span> </span> 
-                                </div>
+                                        </strong></span></p>
+                            </div>
+                            <div class="product-price-container"><span class="product-price"><span id="price_displayed"
+                                        class="value">99</span><span class="currency">&nbsp;ر.س <span
+                                            id="quantity_displayed">(قطعتان) </span></span> </span>
+                            </div>
                             <div id="express-checkout-section" class="product-section checkout-section"
                                 data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
                                 data-pb-type="single-product" data-pb-value="[object Object]">
@@ -510,8 +511,8 @@
                                                             placeholder="الكمــية">
                                                             <option value="">اختر الكمــية</option>
                                                             <!-- <option value="1piece">قطعــة واحـدة (99 SAR) </option> -->
-                                                            <option value="2piece">قطعتــان (149 SAR) </option>
-                                                            <option value="3piece">3 قطع (199 SAR) </option>
+                                                            <option value="2piece">قطعتــان (99 SAR) </option>
+                                                            <option value="3piece">3 قطع (139 SAR) </option>
                                                         </Select>
                                                     </div>
                                                     <input type="hidden" name="quantity_pieces" id="quantity" value="1">
@@ -615,17 +616,17 @@
             } else if (selectedValue === "2piece") {
                 price_pieces.value = "50";
                 hiddenInput.value = "2";
-                currencyElement.innerText = "149";
+                currencyElement.innerText = "99";
                 quantity_displayed.innerText = "(قطعتان)";
-            }  if (selectedValue === "3piece") {
+            } if (selectedValue === "3piece") {
                 price_pieces.value = "67";
                 hiddenInput.value = "3";
-                currencyElement.innerText = "199";
+                currencyElement.innerText = "139";
                 quantity_displayed.innerText = "(3 قطع)";
-            } else  {
+            } else {
                 price_pieces.value = "50";
                 hiddenInput.value = "2";
-                currencyElement.innerText = "149";
+                currencyElement.innerText = "99";
                 quantity_displayed.innerText = "(قطعتان)";
             }
         });
