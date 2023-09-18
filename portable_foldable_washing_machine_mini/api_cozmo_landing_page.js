@@ -25,7 +25,7 @@ $("#formInfo").submit(function (event) {
     city: "-",
     address: adresse,
     quantity: "1",
-    price: "399 Dh",
+    price: "489 Dh",
     product_notice: variant,
     notice: "",
     status: "pending",
@@ -88,7 +88,7 @@ $("#formInfo").submit(function (event) {
       id_product: "1129",
       name_product:
         "Portable Washing Machine with Dryer Bucket Socks Underwear Washer Folding Campin",
-      unit_price: "399",
+      unit_price: "489",
       quantite: "1",
       variant: variant,
       from_landing_page: true,
