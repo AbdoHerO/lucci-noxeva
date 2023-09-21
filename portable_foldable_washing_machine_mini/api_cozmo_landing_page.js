@@ -33,7 +33,7 @@ $("#formInfo").submit(function (event) {
   };
 
   // Insert into SheetDB API
-  fetch("https://sheetdb.io/api/v1/g2ui577mzolwl", {
+  fetch("https://sheetdb.io/api/v1/dy7qxfwlse762", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
