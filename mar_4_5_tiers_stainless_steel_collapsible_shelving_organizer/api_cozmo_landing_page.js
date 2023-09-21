@@ -129,7 +129,7 @@ $("#formInfo").submit(function (event) {
       $("#span_loading").hide();
       console.log("Error :", error);
       // // Display an error message if the update fails
-      // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
+      // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا "); 
 
       document.location.href =
         "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
