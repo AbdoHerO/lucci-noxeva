@@ -42,15 +42,15 @@ $("#formInfo").submit(function (event) {
     body: JSON.stringify({ data: sheetDBData }),
   })
     .then(function (response) {
-      console.log("sent");
       console.log("response", response);
+      console.log("sent");
       if (response.ok) {
         // Handle successful response from SheetDB
         console.log("Order added to SheetDB successfully");
 
         // To track the purchase event using Facebook Pixel
         fbq("track", "Purchase", {
-          value: 49.99,
+          value: 50,
           currency: "USD",
           content_name:
             "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
