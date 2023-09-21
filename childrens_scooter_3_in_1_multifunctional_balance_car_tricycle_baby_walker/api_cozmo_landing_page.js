@@ -10,6 +10,11 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
+  var variant = $('#formInfo select[name="color"]').val();
+
+  if (!variant) {
+    variant = "Orange";
+  }
 
   // Create the data object for SheetDB
   var sheetDBData = {
@@ -21,7 +26,7 @@ $("#formInfo").submit(function (event) {
     address: adresse,
     quantity: "1",
     price: "399 Dh",
-    product_notice: "",
+    product_notice: variant,
     notice: "",
     status: "pending",
     fees_shipping: "",
@@ -86,7 +91,7 @@ $("#formInfo").submit(function (event) {
         "Children Scooter Tricycle Baby 3 In 1 Multi-Function Balance Bike Ride On Toys",
       unit_price: "399",
       quantite: "1",
-      variant: "",
+      variant: variant,
       from_landing_page: true,
     },
     success: function (response) {

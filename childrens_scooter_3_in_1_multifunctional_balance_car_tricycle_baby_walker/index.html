@@ -474,6 +474,20 @@
                                             <div class="checkout-form">
                                                 <div class="checkout-groups">
                                                     <h2 class="checkout-heading"></h2>
+                                                    
+                                                    <div class="form-group is-required"><label
+                                                            class="form-label">اللون</label>
+                                                        <Select required
+                                                            oninvalid="this.setCustomValidity('المرجو اختيار اللون');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو اختيار اللون" type="text"
+                                                            name="color" placeholder="اللون" id="colorSelector">
+                                                            <option value="">اختر اللون</option>
+                                                            <option value="LightSkyBlue">أزرق</option>
+                                                            <option value="Orange">برتقالي</option>
+                                                        </Select>
+                                                    </div>
+
                                                     <div class="form-group is-required"><label class="form-label">الأسم
                                                             الكامل</label> <input required
                                                             oninvalid="this.setCustomValidity('المرجو إدخال إسمك');"
