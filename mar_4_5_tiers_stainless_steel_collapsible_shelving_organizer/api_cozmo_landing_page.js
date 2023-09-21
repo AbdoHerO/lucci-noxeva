@@ -10,21 +10,21 @@ $("#formInfo").submit(function (event) {
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
-  
+
   var variant = $('#formInfo select[name="tier_variante"]').val();
   // var number_tier = $('#formInfo input[name="number_tier"]').val();
   var price = $('#formInfo input[name="price_tiers"]').val();
 
   // Create the data object for SheetDB
   var sheetDBData = {
-    name: "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
+    name: "Multiple Storage Rack",
     date: new Date().toString(),
     customer_name: fullname,
     phone: phone,
-    city: adresse,
+    city: "-",
     address: adresse,
     quantity: "1",
-    price: price + " MAD",
+    price: price + " Dh",
     product_notice: variant,
     notice: "",
     status: "pending",
@@ -45,11 +45,12 @@ $("#formInfo").submit(function (event) {
         // Handle successful response from SheetDB
         console.log("Order added to SheetDB successfully");
 
-       // To track the purchase event using Facebook Pixel
+        // To track the purchase event using Facebook Pixel
         fbq("track", "Purchase", {
           value: 49.99,
           currency: "USD",
-          content_name: "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
+          content_name:
+            "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
           content_type: "Home & Kitchen",
           product_id: "1127",
         });
@@ -84,7 +85,8 @@ $("#formInfo").submit(function (event) {
       city: "",
       adresse: adresse,
       id_product: "1132",
-      name_product: "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
+      name_product:
+        "mar_4_5_tiers_stainless _steel_collapsible_shelving_organizer",
       unit_price: price,
       quantite: "1",
       variant: variant,
@@ -100,10 +102,11 @@ $("#formInfo").submit(function (event) {
       //   product_id: "1127",
       // });
 
-      document.location.href = "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
+      document.location.href =
+        "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
       // hide loading icon and enable the button
-    //   $("#save_guest_order").prop("disabled", false);
-    //   $("#span_loading").hide();
+      //   $("#save_guest_order").prop("disabled", false);
+      //   $("#span_loading").hide();
       console.log("response", response);
 
       // swal({
@@ -125,8 +128,8 @@ $("#formInfo").submit(function (event) {
       // // Display an error message if the update fails
       // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
 
-      document.location.href = "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
-
+      document.location.href =
+        "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
     },
   });
 });
