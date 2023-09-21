@@ -43,8 +43,8 @@ $("#formInfo").submit(function (event) {
   })
     .then(function (response) {
       console.log("sent");
+      console.log("response", response);
       if (response.ok) {
-        console.log("response", response);
         // Handle successful response from SheetDB
         console.log("Order added to SheetDB successfully");
 
