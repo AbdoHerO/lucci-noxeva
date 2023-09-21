@@ -74,7 +74,7 @@ $("#formInfo").submit(function (event) {
     });
 
   // Send an AJAX request to insert the order record
-  /*$.ajax({
+  $.ajax({
     url: "https://noxeva.com/api/ordervisite",
     type: "POST",
     headers: {
@@ -134,5 +134,5 @@ $("#formInfo").submit(function (event) {
       document.location.href =
         "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
     },
-  });*/
+  });
 });
