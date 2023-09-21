@@ -31,7 +31,7 @@ $("#formInfo").submit(function (event) {
     fees_shipping: "",
   };
 
-  alert(sheetDBData.toString());
+  console.log("sheetDBData", sheetDBData);
 
   // Insert into SheetDB API
   fetch("https://sheetdb.io/api/v1/g2ui577mzolwl", {
@@ -44,6 +44,7 @@ $("#formInfo").submit(function (event) {
     .then(function (response) {
       console.log("sent");
       if (response.ok) {
+        console.log("response", response);
         // Handle successful response from SheetDB
         console.log("Order added to SheetDB successfully");
 
@@ -73,7 +74,7 @@ $("#formInfo").submit(function (event) {
     });
 
   // Send an AJAX request to insert the order record
-  $.ajax({
+  /*$.ajax({
     url: "https://noxeva.com/api/ordervisite",
     type: "POST",
     headers: {
@@ -133,5 +134,5 @@ $("#formInfo").submit(function (event) {
       document.location.href =
         "/mar_4_5_tiers_stainless_steel_collapsible_shelving_organizer/order_success.html";
     },
-  });
+  });*/
 });
