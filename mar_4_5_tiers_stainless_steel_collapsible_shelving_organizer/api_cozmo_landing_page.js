@@ -31,6 +31,8 @@ $("#formInfo").submit(function (event) {
     fees_shipping: "",
   };
 
+  alert(sheetDBData);
+
   // Insert into SheetDB API
   fetch("https://sheetdb.io/api/v1/g2ui577mzolwl", {
     method: "POST",
