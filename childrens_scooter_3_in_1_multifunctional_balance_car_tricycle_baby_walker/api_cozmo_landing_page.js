@@ -20,7 +20,7 @@ $("#formInfo").submit(function (event) {
     city: "-",
     address: adresse,
     quantity: "1",
-    price: "399 Dh",
+    price: "489 Dh",
     product_notice: "",
     notice: "",
     status: "pending",
@@ -84,7 +84,7 @@ $("#formInfo").submit(function (event) {
       id_product: "1130",
       name_product:
         "Children Scooter Tricycle Baby 3 In 1 Multi-Function Balance Bike Ride On Toys",
-      unit_price: "399",
+      unit_price: "489",
       quantite: "1",
       variant: "",
       from_landing_page: true,
