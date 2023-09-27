@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you</title>
+    <meta property="og:title" content="Thank you" />
+    <meta property="og:image" content="images/noxeva_lucci_logo.png" />
+
+    <meta name="twitter:title" content="Thank you" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:images0" content="images/noxeva_lucci_logo.png" />
+    <link rel="icon" type="image/png" href="images/cozmo_lucci_favicon.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:wght@600&display=swap');
+
+        @font-face {
+            font-family: 'Cairo';
+            src: url('../fonts/cairo/cairo.ttf') format('truetype');
+            /* font-weight: normal;
+            font-style: normal; */
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(to bottom, #fff 13%, #2692c0);
+        }
+
+        * {
+            font-family: 'cairo';
+        }
+
+        #card {
+            position: relative;
+            top: 110px;
+            width: 320px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            font-family: 'cairo';
+        }
+
+        #upper-side {
+            padding: 2em;
+            background-color: #32cd32;
+            display: block;
+            color: #fff;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        #checkmark {
+            width: 94%;
+            font-weight: lighter;
+            fill: #fff;
+            margin: -3.5em auto auto 20px;
+        }
+
+        #status {
+            /* font-weight: lighter; */
+            text-transform: uppercase;
+            /* letter-spacing: 2px; */
+            font-size: 1em;
+            margin-top: -.2em;
+            margin-bottom: 0;
+        }
+
+        #lower-side {
+            padding: 2em;
+            background: #fff;
+            display: block;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        #message {
+            margin-top: -.5em;
+            color: #757575;
+            /* letter-spacing: 1px; */
+        }
+
+        #message2 {
+            margin-top: 26px;
+            font-weight: 500;
+            font-size: 20px;
+            color: #757575;
+        }
+
+        #contBtn {
+            position: relative;
+            top: 1.5em;
+            text-decoration: none;
+            background: #32cd32;
+            color: #fff;
+            margin: auto;
+            padding: .8em 3em;
+            -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+            -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+            box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+            border-radius: 25px;
+            -webkit-transition: all .4s ease;
+            -moz-transition: all .4s ease;
+            -o-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        #contBtn:hover {
+            -webkit-box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.40);
+            -moz-box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.40);
+            box-shadow: 0px 15px 30px rgba(60, 60, 60, 0.40);
+            -webkit-transition: all .4s ease;
+            -moz-transition: all .4s ease;
+            -o-transition: all .4s ease;
+            transition: all .4s ease;
+        }
+
+        .body_fixed {
+            position: fixed;
+        }
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+        }
+
+        .loader::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 6px solid #3498db;
+            border-color: #3498db transparent #3498db transparent;
+            animation: loaderAnimation 1.5s linear infinite;
+        }
+
+        @keyframes loaderAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loaded .loader {
+            display: none;
+        }
+    </style>
+
+    <!-- Tiktok Pixel Code -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+
+            ttq.load('CKA048JC77U2JMMINVOG');
+            ttq.page();
+        }(window, document, 'ttq');
+
+        // To track the purchase event using TikTok Pixel
+        ttq.track("CompletePayment", {
+            contents: [
+                {
+                    content_id: "1125",
+                    content_name: "axi_inflatable_sofa_2",
+                    quantity: 1,
+                    price: 110,
+                },
+            ],
+            content_type: "product",
+            value: 110,
+            currency: "USD",
+        });
+        //--------------------------------------------------
+    </script>
+    <!-- Tiktok Pixel Code -->
+
+
+</head>
+
+<body class="body_fixed">
+
+    <div class="loader"></div>
+
+    <div class="logo_div" style="text-align: center; padding-top: 18%;">
+        <img src="images/noxeva_lucci_logo.png" alt="" style="width: 80%;margin: auto;">
+    </div>
+    <div id='card' class="animated fadeIn">
+        <div id='upper-side'>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg
+                version="1.1" id="checkmark" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+                <path
+                    d="M131.583,92.152l-0.026-0.041c-0.713-1.118-2.197-1.447-3.316-0.734l-31.782,20.257l-4.74-12.65 c-0.483-1.29-1.882-1.958-3.124-1.493l-0.045,0.017c-1.242,0.465-1.857,1.888-1.374,3.178l5.763,15.382 c0.131,0.351,0.334,0.65,0.579,0.898c0.028,0.029,0.06,0.052,0.089,0.08c0.08,0.073,0.159,0.147,0.246,0.209 c0.071,0.051,0.147,0.091,0.222,0.133c0.058,0.033,0.115,0.069,0.175,0.097c0.081,0.037,0.165,0.063,0.249,0.091 c0.065,0.022,0.128,0.047,0.195,0.063c0.079,0.019,0.159,0.026,0.239,0.037c0.074,0.01,0.147,0.024,0.221,0.027 c0.097,0.004,0.194-0.006,0.292-0.014c0.055-0.005,0.109-0.003,0.163-0.012c0.323-0.048,0.641-0.16,0.933-0.346l34.305-21.865 C131.967,94.755,132.296,93.271,131.583,92.152z" />
+                <circle fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="10" cx="109.486" cy="104.353"
+                    r="32.53" />
+            </svg>
+            <h3 id='status'> تمت الطلبية بنجاح! </h3>
+        </div>
+        <div id='lower-side'>
+            <p id='message'> تم استلام طلبك بنجاح وسنقوم بمعالجته في أقرب وقت ممكن </p>
+            <p id='message2'> شكرًا لك </p>
+            <!-- <a href="#" id="contBtn">Continue</a> -->
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/loarder_wrapper.js"></script>
+
+</body>
+
+</html>
