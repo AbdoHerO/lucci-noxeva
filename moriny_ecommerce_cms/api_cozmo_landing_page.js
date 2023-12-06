@@ -44,17 +44,14 @@ $("#formInfo").submit(function (event) {
 
         // To track the purchase event using Facebook Pixel
         fbq("track", "Purchase", {
-          value: 10,
+          value: 159,
           currency: "USD",
-          content_name: "Moriny Ecommerce CMS",
-          content_type: "Ecommerce",
-          product_id: "1",
         });
 
         // To track the purchase event using Snap Pixel
         // snaptr("track", "PURCHASE", { value: 132, currency: "USD" });
 
-        document.location.href = "/moriny_ecommerce_cms/order_success.html";
+        document.location.href = "/order_success.html";
       } else {
         // Handle error response from SheetDB
         console.log("Failed to add order to SheetDB");
