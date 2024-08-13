@@ -170,6 +170,34 @@
   font-weight: bold;
 }
 
+.price_hot_sale_1{
+  color: #32cd32;
+  font-size: 26px;
+}
+.price_hot_sale_2{
+  color: #32cd32;
+  font-size: 30px;
+  font-weight: bold;
+}
+.offre_sale{
+  color: #202020;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.overlay-img-gif {
+  width: 100%;
+  position: absolute;
+  top: 51.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 0 !important;
+  border: none;
+  border-radius: 5px;
+}
+
+
 #fade_buy_btn_lead {
   animation-name: scale_buy_btn_lead;
   /* animation-name: fade_buy_btn_lead; */
@@ -2918,3 +2946,10 @@ input::placeholder {
     max-height: 240px;
   }
 }
+
+
+
+
+
+
+

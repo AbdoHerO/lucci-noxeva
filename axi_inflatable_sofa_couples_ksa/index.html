@@ -19,6 +19,10 @@
     <meta name="twitter:description" content="" />
     <meta name="twitter:images0" content="images/noxeva_lucci_logo.png" />
     <link rel="icon" type="image/png" href="images/cozmo_lucci_favicon.png" />
+<!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 
 
     <link href="css/root.css" rel="stylesheet">
@@ -26,7 +30,6 @@
 
     <!-- <script src="js/fbevents.js"></script> -->
 
-    <!-- Facebook Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -42,18 +45,6 @@
         fbq('init', '952987996128336');
         fbq('track', 'PageView');
     </script>
-    <!-- Facebook Pixel Code -->
-
-    <!-- Tiktok Pixel Code -->
-    <script>
-        !function (w, d, t) {
-            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
-
-            ttq.load('CK5JLMRC77UACAV1BSPG');
-            ttq.page();
-        }(window, document, 'ttq');
-    </script>
-    <!-- Tiktok Pixel Code -->
 
     <script>
         // Disable right-click
@@ -158,18 +149,133 @@
             margin-bottom: 0px;
             margin-left: 0px;
         }
+
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 90%;
+            border-radius: 3px 0 0 3px;
+        }
+
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+        /* Improved touch responsiveness */
+        body {
+            touch-action: pan-y;
+        }
+
+
     </style>
     <script class="u-script" type="text/javascript" src="clients_reviews/jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="clients_reviews/nicepage.js" defer=""></script>
-    <link rel="stylesheet" href="css/loader.css">
-
+    <script src="js/slider1.js"></script>
+    <link rel="stylesheet" href="css/loader.css">   
 
 </head>
 
 <body class="body_fixed">
-
     <div class="loader"></div>
-
     <div id="app">
         <cart-side-summary
             :initial-cart="{&quot;sub_total&quot;:0,&quot;count&quot;:0,&quot;one_page_checkout&quot;:false,&quot;created_at&quot;:&quot;2023-04-16T17:52:26.299861Z&quot;,&quot;items&quot;:{&quot;data&quot;:[]}}"></cart-side-summary>
@@ -193,9 +299,8 @@
                                                     <a href="" style="border: none; font-weight: 700; font-size: 19px;"
                                                         target="_blank" class="title-section-text"
                                                         data-pb-section="PBS-svr6ws1661723616425" data-pb-field="text"
-                                                        data-pb-type="text"
-                                                        data-pb-value="تخفيض 50% و توصيل مجاني سريع">
-                                                        تخفيض 50% و توصيل مجاني سريع
+                                                        data-pb-type="text" data-pb-value="ت 50% و توصي مجاني ريع">
+                                                        تخفيض 50% و التوصيل مجاني و سريع
                                                     </a>
                                                 </p>
                                             </div>
@@ -218,28 +323,255 @@
                 </section>
 
 
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/1__.jpg"
+                            style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/2__.jpg"
+                            style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/3__2.jpg"
+                            style="width:100%">
+                    </div>
+
+
+
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                    // Auto-scroll functionality
+                    let autoScrollInterval;
+
+                    function startAutoScroll() {
+                        autoScrollInterval = setInterval(function () {
+                            plusSlides(1);
+                        }, 3000); // Adjust the interval (in milliseconds) as needed
+                    }
+
+                    function stopAutoScroll() {
+                        clearInterval(autoScrollInterval);
+                    }
+
+                    // Touch swipe functionality
+                    let touchStartX;
+
+                    document.addEventListener('touchstart', function (e) {
+                        touchStartX = e.touches[0].clientX;
+                        stopAutoScroll();
+                    });
+
+                    document.addEventListener('touchend', function (e) {
+                        let touchEndX = e.changedTouches[0].clientX;
+                        let swipeDistance = touchEndX - touchStartX;
+
+                        if (swipeDistance > 50) {
+                            plusSlides(-1);
+                        } else if (swipeDistance < -50) {
+                            plusSlides(1);
+                        }
+
+                        startAutoScroll();
+                    });
+
+                    // Start auto-scroll on page load
+                    startAutoScroll();
+                </script>
+
+
+<section id="PBS-47z7f1661723616426" class="section page-section title-section PBS-47z7f1661723616426"
+                    style="background: #fff;">
+                    <div class="inner-container">
+                        <div class="inner-title" data-pb-debug="margin padding">
+                            <div class="fr-view">
+                                <p class="title-section-content">
+                                    <span class="title-section-stylish"></span>
+                                    <a href="" style="font-size: 1.7rem; color: #2692c0;" target="_blank"
+                                        class="title-section-text" data-pb-section="PBS-47z7f1661723616426"
+                                        data-pb-field="text" data-pb-type="text"
+                                        data-pb-value="للطلب المرجو ملأ الإستمارة أسفله">
+                                        للطلب المرجو ملٱ الإستمارة اسفله
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="PBS-qnim9k1632909988068"
+                    class="section page-section express-checkout-form-section PBS-qnim9k1632909988068">
+                    <div data-pb-debug="margin" class="inner-express-checkout-form">
+                        <div data-pb-debug="padding" class="page-builder-express-checkout-wrapper">
+                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
+                                data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
+                              
+                            </div>
+
+                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
+                                data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
+                                <p><span style="font-size: 24px; color: #2692c0"><strong>
+                                            <span class="offre_sale">عرض خاص !</span>
+                                            <br>
+                                            <span>
+                                                قطعة واحد بسعر <span class="price_hot_sale_1">299 ريال</span> و قطعتين
+                                                بسعر <span class="price_hot_sale_1">349 ريال</span>
+                                            </span>
+
+                                        </strong>
+                                    </span>
+                                </p>
+                            </div>
+
+
+                            <div class="product-price-container"><span class="product-price"><span id="price_displayed"
+                                        class="value">299</span><span class="currency">&nbsp;ر.س</span></span>
+                            </div>
+                            <div id="express-checkout-section" class="product-section checkout-section"
+                                data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
+                                data-pb-type="single-product" data-pb-value="[object Object]">
+                                <div class="checkout">
+                                    <div class="main">
+                                        <form method="post" enctype="multipart/form-data" id="formInfo"><input
+                                                type="hidden" name="id" value="cc83bb80-0d63-40cc-81f5-ba7093419793">
+                                            <input type="hidden" name="quantity" value="1"> <input type="text"
+                                                name="extra_payload" style="display: none;">
+                                            <div class="checkout-form">
+                                                <div class="checkout-groups">
+                                                    <h2 class="checkout-heading"></h2>
+
+                                                    <div class="form-group is-required"><label class="form-label">عدد
+                                                            الطبقات</label>
+                                                        <Select required
+                                                            oninvalid="this.setCustomValidity('المرجو اختيار الكمية');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو اختيار عدد البقات" type="text"
+                                                            name="tier_variante" id="tier_variante"
+                                                            placeholder="الكمية">
+                                                            <option value="">المرجو إختيار الكمية</option>
+                                                            <option value="1">واحد ب 299 ريال فقط</option>
+                                                            <option value="2">إثنان ب 349 ريال فقط</option>
+                                                        </Select>
+                                                    </div>
+                                                    <!-- </div> -->
+                                                    <input type="hidden" name="number_tier" id="number_tier" value="1">
+                                                    <input type="hidden" name="price_tiers" id="price_tiers" value="">
+                                                    <div class="form-group is-required"><label class="form-label">الإسم الكامل
+                                                            </label> <input required
+                                                            oninvalid="this.setCustomValidity('المرجو إخال إسمك');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو دخال إسمك" type="text"
+                                                            name="fullname" placeholder="الأسم الكامل">
+                                                    </div>
+                                                    <div class="form-group is-required"><label class="form-label">رقم
+                                                            الهاتف</label> <input required
+                                                            oninvalid="this.setCustomValidity('المرجو إدخال قم الهاتف');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو إدخال رقم الهاتف" type="number"
+                                                            name="phone" placeholder="رقم الهاتف"></div>
+                                                    <div class="form-group is-required"><label
+                                                            class="form-label">العنوان</label> <input required
+                                                            oninvalid="this.setCustomValidity('المرجو إدخال العنوان');"
+                                                            onchange="try{setCustomValidity('')}catch(e){};"
+                                                            x-moz-errormessage="المرجو إدخال العنوان" type="text"
+                                                            name="adresse" placeholder="العنوان"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-pb-section="PBS-qnim9k1632909988068"
+                                data-pb-field="express-checkout-form-pre-footer" data-pb-type="html-editor"
+                                data-pb-value="" class="fr-view ec-form-pre-footer"></div>
+                            <div class="product-section add-to-cart-section">
+                                <button id="save_guest_order" style="font-size: 1.8rem;" type="submit"
+                                    data-pb-section="PBS-qnim9k1632909988068" data-pb-field="button-text"
+                                    data-pb-type="text" data-pb-value="إضغط هنا لطلب المنتج"
+                                    class="button single-submit" form="formInfo">
+                                    <span>إضغط هنا لطلب المنتج</span>
+                                    <i class="fa fa-spinner fa-spin" style="margin-right: 5px; display: none;"
+                                        id="span_loading"></i>
+                                </button>
+                            </div>
+                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-footer"
+                                data-pb-type="html-editor" data-pb-value="" class="fr-view ec-form-footer"></div>
+                        </div>
+                    </div>
+                </section>
+
                 <div class="container">
-                    <img src="images/bg.jpg" alt="Image description">
+                    <img src="images/bg.jpg"
+                        alt="Image description">
+                <a href="#PBS-qnim9k1632909988068">
+                    <button id="fade_buy_btn_lead" class="overlay-button" style="top: 13.8%;">إشتري الآن ب 299 ريال فقط
+                        </button>
+                </a>
+                <a href="#PBS-qnim9k1632909988068">
+                    <button id="fade_buy_btn_lead" class="overlay-button" style="top: 37.4%;">إشتري الآن ب 299 ريال فقط
+                        </button>
+                </a>
+                <a href="#PBS-qnim9k1632909988068">
+                    <button id="fade_buy_btn_lead" class="overlay-button" style="top: 72.8%;">إشتري الآن ب 299 ريال فقط
+                        </button>
+                </a>
                     <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 13.75%;">احصل عليها اليوم ب
-                            299
-                            ريال
-                            فقط</button>
-                    </a>
-                    <a href="#PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 37.3%;">احصل عليها اليوم ب 299
-                            ريال
-                            فقط</button>
-                    </a>
-                    </a>
-                    <a href=" #PBS-qnim9k1632909988068">
-                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 72.75%">احصل عليها اليوم ب 299
-                            ريال
-                            فقط</button>
+                        <button id="fade_buy_btn_lead" class="overlay-button" style="top: 94%;
+                        position: fixed;
+                        padding: 15px 10px !important;
+                        font-size: 21px;    ">إشتري الآن ب 299 ريال فقط
+                            </button>
                     </a>
                 </div>
 
-                <section id=" PBS-lhtsfb1661723616426" style="background: white; margin-top: -6px;"
+                <section id="PBS-lhtsfb1661723616426"
                     class="section page-section title-section PBS-lhtsfb1661723616426">
                     <div class="inner-container">
                         <div class="inner-title" data-pb-debug="margin padding">
@@ -285,8 +617,7 @@
                                                 </p>
                                                 <h5
                                                     class="u-align-right u-custom-font u-heading-font u-text u-text-black u-text-3">
-                                                    ـ أسماء الراضي
-                                                </h5>
+                                                    ـ أحمد فارس                                                </h5>
                                             </div>
                                         </div>
                                         <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt=""
@@ -307,7 +638,8 @@
                                                     التخزين 👍</p>
                                                 <h5
                                                     class="u-align-right u-custom-font u-heading-font u-text u-text-black u-text-5">
-                                                    ـ أحمد فارس</h5>
+                                                    أسماء الراضي
+ـ </h5>
                                             </div>
                                         </div>
                                         <div class="u-image u-image-circle u-preserve-proportions u-image-2" alt=""
@@ -479,73 +811,8 @@
                 </section>
 
 
-                <section id="PBS-qnim9k1632909988068"
-                    class="section page-section express-checkout-form-section PBS-qnim9k1632909988068">
-                    <div data-pb-debug="margin" class="inner-express-checkout-form">
-                        <div data-pb-debug="padding" class="page-builder-express-checkout-wrapper">
-                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-header"
-                                data-pb-type="html-editor" data-pb-value="فقط ب" class="fr-view">
-                                <p><span style="font-size: 24px; color: #2692c0"><strong>فقط
-                                            ب</strong></span></p>
-                            </div>
-                            <div class="product-price-container"><span class="product-price"><span
-                                        class="value">299</span><span class="currency">&nbsp;ر.س</span></span>
-                            </div>
-                            <div id="express-checkout-section" class="product-section checkout-section"
-                                data-pb-section="PBS-qnim9k1632909988068" data-pb-field="product-id"
-                                data-pb-type="single-product" data-pb-value="[object Object]">
-                                <div class="checkout">
-                                    <div class="main">
-                                        <form method="post" enctype="multipart/form-data" id="formInfo">
-                                            <input type="hidden" name="id" value="cc83bb80-0d63-40cc-81f5-ba7093419793">
-                                            <input type="hidden" name="quantity" value="1"> <input type="text"
-                                                name="extra_payload" style="display: none;">
-                                            <div class="checkout-form">
-                                                <div class="checkout-groups">
-                                                    <h2 class="checkout-heading"></h2>
-                                                    <div class="form-group is-required"><label class="form-label">الأسم
-                                                            الكامل</label> <input required
-                                                            oninvalid="this.setCustomValidity('المرجو إدخال إسمك');"
-                                                            onchange="try{setCustomValidity('')}catch(e){};"
-                                                            x-moz-errormessage="المرجو إدخال إسمك" type="text"
-                                                            name="fullname" placeholder="الأسم الكامل">
-                                                    </div>
-                                                    <div class="form-group is-required"><label class="form-label">رقم
-                                                            الهاتف</label> <input required
-                                                            oninvalid="this.setCustomValidity('المرجو إدخال رقم الهاتف');"
-                                                            onchange="try{setCustomValidity('')}catch(e){};"
-                                                            x-moz-errormessage="المرجو إدخال رقم الهاتف" type="number"
-                                                            name="phone" placeholder="رقم الهاتف"></div>
-                                                    <div class="form-group is-required"><label
-                                                            class="form-label">العنوان</label> <input required
-                                                            oninvalid="this.setCustomValidity('المرجو إدخال العنوان');"
-                                                            onchange="try{setCustomValidity('')}catch(e){};"
-                                                            x-moz-errormessage="المرجو إدخال العنوان" type="text"
-                                                            name="adresse" placeholder="العنوان"></div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-pb-section="PBS-qnim9k1632909988068"
-                                data-pb-field="express-checkout-form-pre-footer" data-pb-type="html-editor"
-                                data-pb-value="" class="fr-view ec-form-pre-footer"></div>
-                            <div class="product-section add-to-cart-section">
-                                <button id="save_guest_order" style="font-size: 1.8rem;" type="submit"
-                                    data-pb-section="PBS-qnim9k1632909988068" data-pb-field="button-text"
-                                    data-pb-type="text" data-pb-value="إضغط هنا لطلب المنتج"
-                                    class="button single-submit" form="formInfo">
-                                    <span>إضغط هنا لطلب المنتج</span>
-                                    <i class="fa fa-spinner fa-spin" style="margin-right: 5px; display: none;"
-                                        id="span_loading"></i>
-                                </button>
-                            </div>
-                            <div data-pb-section="PBS-qnim9k1632909988068" data-pb-field="express-checkout-form-footer"
-                                data-pb-type="html-editor" data-pb-value="" class="fr-view ec-form-footer"></div>
-                        </div>
-                    </div>
-                </section>
+
+
 
                 <section class="section page-section title-section"
                     style="background: #fff; padding-top: 25px; padding-bottom: 10px;">
@@ -567,7 +834,7 @@
                 </section>
 
                 <footer style="padding: 13px 0; background: #2692c0; color: #fff;">
-                    <h2 style="margin: 0;">جميع الحقوق محفوظة لدى 2023 © Noxeva</h2>
+                    <h2 style="margin: 0;">جميع الحقوق محفوظة لدى 2024 © Noxeva</h2>
                 </footer>
 
             </div>
@@ -579,7 +846,35 @@
         <!-- Hookables -->
     </div>
 
+    <script>
 
+        var price_tiers = document.getElementById("price_tiers");
+        var selectElement = document.getElementById("tier_variante");
+        // var hiddenInput = document.getElementById("quantity");
+        var currencyElement = document.getElementById("price_displayed");
+
+
+        selectElement.addEventListener("change", function () {
+
+            var selectedValue = selectElement.value;
+
+            if (selectedValue === "1") {
+                price_tiers.value = "299";
+                // hiddenInput.value = "1";
+                currencyElement.innerText = "299";
+            } else if (selectedValue === "2") {
+                price_tiers.value = "349";
+                // hiddenInput.value = "2";
+                currencyElement.innerText = "349";
+            } else {
+                price_tiers.value = "299";
+                // hiddenInput.value = "1";
+                currencyElement.innerText = "299";
+            }
+        });
+
+
+    </script>
 
     <script src="js/ycpay.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>

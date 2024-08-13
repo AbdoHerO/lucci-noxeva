@@ -6,127 +6,80 @@ $("#formInfo").submit(function (event) {
   // Prevent the default form submission
   event.preventDefault();
 
-  // Get the updated data from the form
+// Get the updated data from the form
   var fullname = $('#formInfo input[name="fullname"]').val();
   var phone = $('#formInfo input[name="phone"]').val();
   var adresse = $('#formInfo input[name="adresse"]').val();
 
-  // Create the data object for SheetDB
+
+  var variant = $('#formInfo select[name="tier_variante"]').val();
+  var product_color = $('#formInfo select[name="product_color"]').val();
+  var price = $('#formInfo input[name="price_tiers"]').val();
+
+// Create the data object for SheetDB
   var sheetDBData = {
-    name: "axi_inflatable_sofa_couples",
-    date: new Date().toString(),
-    customer_name: fullname,
+    OrderDate: new Date().toString(),
+    country: "UAE",
+    name: fullname,
     phone: phone,
-    city: adresse,
     address: adresse,
-    quantity: "1",
-    price: "1050 MAD",
-    product_notice: "",
-    notice: "",
+    url: "https://noxeva.moriny.com/axi_inflatable_sofa_couples",
+    sku: "NOX2CHR",
+    Product: "Chair.",
+    quantity: variant,
+    price: "299",
+    currency: "AED",
+    notes: "-",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
     status: "pending",
-    fees_shipping: "",
+	  fees_shipping: "",
   };
 
+  console.log("sheetDBData", sheetDBData);
+
   // Insert into SheetDB API
-  fetch("https://sheetdb.io/api/v1/06f3h8j6ekqmo", {
+  fetch("https://sheetdb.io/api/v1/xsjjxtjilatlp", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": "Bearer 8q38047o6t0imtp0zcsh64h47slafahy250bxyft"
     },
     body: JSON.stringify({ data: sheetDBData }),
   })
-    .then(function (response) {
-      console.log("sent");
-      if (response.ok) {
-        // Handle successful response from SheetDB
-        console.log("Order added to SheetDB successfully");
+  .then(function (response) {
+    console.log("sent");
+    if (response.ok) {
+      // Handle successful response from SheetDB
+      console.log("Order added to SheetDB successfully");
 
-        // To track the purchase event using Facebook Pixel
-        fbq("track", "Purchase", {
-          value: 10,
-          currency: "USD",
-          content_name: "axi_inflatable_sofa",
-          content_type: "home decoration",
-          product_id: "1125",
-        });
+      // To track the purchase event using Facebook Pixel
+      fbq("track", "Purchase", {
+        value: 10,
+        currency: "USD",
+        content_name: "axi_inflatable_sofa",
+        content_type: "home decoration",
+        product_id: "1125",
+      });
 
-        document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
-
-        // To track the purchase event using Snap Pixel
-        // snaptr("track", "PURCHASE", { value: 132, currency: "USD" });
-      } else {
-        // Handle error response from SheetDB
-        console.log("Failed to add order to SheetDB");
-        // throw new Error("Failed to add order to SheetDB");
-      }
-    })
-    .catch(function (error) {
-      console.log("NOT sent");
-      console.log("Error:", error);
-      // Display an error message if the request fails
-      // alert("Failed to add order to SheetDB. Please try again later.");
       document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
-    });
 
-
-  // // Send an AJAX request to insert the order record
-  // $.ajax({
-  //   url: "https://noxeva.com/api/ordervisite",
-  //   type: "POST",
-  //   headers: {
-  //     "Access-Control-Allow-Origin": "*",
-  //   },
-  //   cors: true,
-  //   data: {
-  //     first_name: fullname,
-  //     last_name: "",
-  //     phone: phone,
-  //     city: "",
-  //     adresse: adresse,
-  //     id_product: "1125",
-  //     name_product: "axi_inflatable_sofa",
-  //     unit_price: "1050",
-  //     quantite: "1",
-  //     variant: "",
-  //     from_landing_page: true,
-  //   },
-  //   success: function (response) {
-  //     // // To track the purchase event using Facebook Pixel
-  //     // fbq("track", "Purchase", {
-  //     //   value: 10,
-  //     //   currency: "USD",
-  //     //   content_name: "axi_inflatable_sofa",
-  //     //   content_type: "home decoration",
-  //     //   product_id: "1125",
-  //     // });
-
-  //     document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
-  //     // hide loading icon and enable the button
-  //     //   $("#save_guest_order").prop("disabled", false);
-  //     //   $("#span_loading").hide();
-  //     console.log("response", response);
-
-  //     // swal({
-  //     //   title: "تمت الطلبية بنجاح!",
-  //     //   text: "سيتصل بك فريقنا لتأكيد الطلبية",
-  //     //   icon: "success",
-  //     //   buttons: {
-  //     //     confirm: {
-  //     //       className: "btn btn-success",
-  //     //     },
-  //     //   },
-  //     // });
-  //   },
-  //   error: function (xhr, status, error) {
-  //     // hide loading icon and enable the button
-  //     $("#save_guest_order").prop("disabled", false);
-  //     $("#span_loading").hide();
-  //     console.log("Error :", error);
-  //     // // Display an error message if the update fails
-  //     // alert("وقع حطأ اثناء الطلب , يرجى المحاولة لاحقا ");
-
-  //     document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
-
-  //   },
-  // });
+      // To track the purchase event using Snap Pixel
+      // snaptr("track", "PURCHASE", { value: 132, currency: "USD" });
+    } else {
+      // Handle error response from SheetDB
+      console.log("Failed to add order to SheetDB");
+      // throw new Error("Failed to add order to SheetDB");
+    }
+  })
+  .catch(function (error) {
+    console.log("NOT sent");
+    console.log("Error:", error);
+    // Display an error message if the request fails
+    // alert("Failed to add order to SheetDB. Please try again later.");
+    document.location.href = "/axi_inflatable_sofa_couples/order_success.html";
+  });
 });
