@@ -18,14 +18,14 @@ $("#formInfo").submit(function (event) {
 
 // Create the data object for SheetDB
   var sheetDBData = {
-    OrderDate: new Date().toString(),
+    date: new Date().toString(),
     country: "KSA",
     name: fullname,
     phone: phone,
     address: adresse,
     url: "https://noxeva.moriny.com/axi_inflatable_sofa_couples_ksa",
     sku: "NOX2CHR",
-    Product: "Chair.",
+    product:"Chair.",
     quantity: variant,
     price: "299",
     currency: "SAR",

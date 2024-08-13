@@ -18,14 +18,14 @@ $("#formInfo").submit(function (event) {
 
 // Create the data object for SheetDB
   var sheetDBData = {
-    OrderDate: new Date().toString(),
+    date: new Date().toString(),
     country: "KSA",
     name: fullname,
     phone: phone,
     address: adresse,
     url: "https://noxeva.moriny.com/inflatable_swimming_pool_ksa",
     sku: "NOX2POMW",
-    Product: "Swimming pool for KIDS",
+    product:"Swimming pool for KIDS",
     quantity: variant,
     price: "299",
     currency: "SAR",
