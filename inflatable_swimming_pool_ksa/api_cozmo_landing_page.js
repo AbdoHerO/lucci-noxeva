@@ -29,7 +29,7 @@ $("#formInfo").submit(function (event) {
     quantity: variant,
     price: "299",
     currency: "SAR",
-    notes: "-",
+    notes: "Color : " + product_color,
     utm_source: "",
     utm_medium: "",
     utm_campaign: "",
