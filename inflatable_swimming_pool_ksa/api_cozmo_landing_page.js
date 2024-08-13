@@ -17,33 +17,39 @@ $("#formInfo").submit(function (event) {
   var price = $('#formInfo input[name="price_tiers"]').val();
 
 // Create the data object for SheetDB
-var sheetDBData = {
-  name: "chemise",
-  date: new Date().toString(),
-  customer_name: fullname,
-  phone: phone,
-  city: "-",
-  address: adresse,
-  quantity: variant,
-  price: price,
-  product_notice: "",
-  notice: "Color: " + product_color,
-  status: "pending",
-  fees_shipping: "",
-  size: "product_size",
-};
+  var sheetDBData = {
+    date: new Date().toString(),
+    country: "KSA",
+    name: fullname,
+    phone: phone,
+    address: adresse,
+    url: "https://noxeva.moriny.com/inflatable_swimming_pool_ksa",
+    sku: "NOX2POMW",
+    product:"Swimming pool for KIDS",
+    quantity: variant,
+    price: "299",
+    currency: "SAR",
+    notes: "-",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
+    status: "pending",
+	  fees_shipping: "",
+  };
 
-console.log("sheetDBData", sheetDBData);
+  console.log("sheetDBData", sheetDBData);
 
-// Insert into SheetDB API
-fetch("https://sheetdb.io/api/v1/1torsnrc4ndad", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Authorization": "Bearer 7r1osfye3822uciijcpi89y8gveyn9d3ruogcgcj"
-  },
-  body: JSON.stringify({ data: sheetDBData }),
-})
+  // Insert into SheetDB API
+  fetch("https://sheetdb.io/api/v1/xsjjxtjilatlp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer 8q38047o6t0imtp0zcsh64h47slafahy250bxyft"
+    },
+    body: JSON.stringify({ data: sheetDBData }),
+  })
   .then(function (response) {
     console.log("sent");
     if (response.ok) {
